@@ -5,18 +5,12 @@ angular.
   module('cinemaList').
   component('cinemaList', {
     templateUrl: 'cinema-list/cinema-list.template.html',
-    controller: function CinemaListController() {
-      this.cinemas = [
-        {
-          name: 'Aurora',
-          address: 'l. Pritytskogo 23, Minsk, Belarus'
-        }, {
-          name: 'Oktyabr',
-          address: '73 Independence Ave., Minsk 220013, Belarus'
-        }, {
-          name: 'Belarus',
-          address: 'st. Romanovskaya Sloboda 28, Minsk, Belarus'
-        }
-      ];
-    }
+    controller: ['$http', function CinemaListController($http) {
+      var self = this;
+      self.orderProp = 'name';
+
+      $http.get('http://localhost:8080/api/v1/cinemas/').then(function(response) {
+        self.cinemas = response.data;
+      });
+    }]
   });
