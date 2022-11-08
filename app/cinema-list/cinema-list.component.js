@@ -1,6 +1,5 @@
 'use strict';
 
-// Register `cinemaList` component, along with its associated controller and template
 angular.
   module('cinemaList').
   component('cinemaList', {

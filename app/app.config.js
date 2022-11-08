@@ -1,14 +1,16 @@
+'use strict';
+
 angular.
   module('cinemaTicketApp').
   config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.
-        when('/cinema', {
-          template: '<cinemas-list></cinemas-list>'
+        when('/cinemas', {
+          template: '<cinema-list></cinema-list>'
         }).
-        when('/cinema/:cinemaId', {
+        when('/cinemas/:cinemaId', {
           template: '<cinema-detail></cinema-detail>'
-        }).s
-        otherwise('/cinema');
+        }).
+        otherwise('/cinemas');
     }
   ]);

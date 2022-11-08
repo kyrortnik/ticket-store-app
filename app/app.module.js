@@ -1,9 +1,8 @@
 'use strict';
 
-// Define the `phonecatApp` module
+// Define the `cinemaTicketApp` module
 angular.module('cinemaTicketApp', [
-	 // ...which depends on the `phoneList` module
-     'ngRoute',
+  'ngRoute',
   'cinemaList',
   'cinemaDetail'
-  ]);
+]);

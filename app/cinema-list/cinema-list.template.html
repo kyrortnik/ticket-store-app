@@ -22,7 +22,7 @@
 
       <ul class="cinemas">   
          <li ng-repeat="cinema in $ctrl.cinemas | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
-          <a href="#!/cinema/{{cinema.id}}" class="thumb">
+          <a href="#!/cinemas/{{cinema.id}}" class="thumb">
             <img ng-src="{{cinema.imageUrl}}" alt="{{cinema.name}}" />
           </a>
           <a href="#!/cinemas/{{cinema.id}}">{{cinema.name}}</a>
