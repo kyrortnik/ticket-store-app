@@ -1,0 +1,22 @@
+
+<h1>{{$ctrl.hall.name}}</h1>
+
+<ul class="specs">
+  <li>
+    <span>Has 3D Support</span>
+    <dd>{{$ctrl.hall.has3DSupport}}</dd>
+  </li>
+   <li>
+    <span>Has IMAX Support</span>
+    <dd>{{$ctrl.hall.hasIMAXSupport}}</dd>
+  </li>
+</ul>
+
+<ul class="movies">
+  <li ng-repeat="movie in $ctrl.hall.moviesInRotation" class="thumbnail">
+   <!--  <a href="#!/halls/{{hall.id}}" class="thumb">
+    <img ng-src="{{cinema.imageUrl}}" alt="{{cinema.name}}" />
+    </a> -->
+    <a href="#!/movies/{{movie.id}}">{{movie.title}}</a>
+    </li>
+</ul> 

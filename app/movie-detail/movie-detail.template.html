@@ -1,0 +1,17 @@
+<h1>{{$ctrl.movie.title}}</h1>
+
+<ul class="specs">
+  <li>
+    <span>length in minutes</span>
+    <dd>{{$ctrl.movie.length}}</dd>
+  </li>
+   <li>
+    <span>Days in rotation</span>
+    <dd>{{$ctrl.movie.daysInRotation}}</dd>
+  </li>
+  <li>
+    <img ng-src="{{$ctrl.movie.posterLink}}" alt="film poster">
+  </li>
+</ul>
+
+<a href="#!/tickets/dummyUrl">Buy Ticket</a>

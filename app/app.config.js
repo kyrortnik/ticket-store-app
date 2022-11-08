@@ -1,5 +1,3 @@
-'use strict';
-
 angular.
   module('cinemaTicketApp').
   config(['$routeProvider',
@@ -7,10 +5,16 @@ angular.
       $routeProvider.
         when('/cinemas', {
           template: '<cinema-list></cinema-list>'
-        }).
-        when('/cinemas/:cinemaId', {
+        })
+        .when('/cinemas/:cinemaId', {
           template: '<cinema-detail></cinema-detail>'
-        }).
-        otherwise('/cinemas');
+        })
+        .when('/halls/:hallId', {
+          template: '<hall-detail></hall-detail>'
+        })
+        .when('/movies/:movieId', {
+          template: '<movie-detail></movie-detail>'
+        })
+        .otherwise('/cinemas');
     }
   ]);
