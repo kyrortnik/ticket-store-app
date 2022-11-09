@@ -3,5 +3,6 @@ angular.module('cinemaTicketApp', [
   'cinemaList',
   'cinemaDetail',
   'hallDetail',
-  'movieDetail'
+  'movieDetail',
+  'core'
 ]);
