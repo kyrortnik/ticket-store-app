@@ -1,38 +1,23 @@
-
+<img ng-src="{{$ctrl.cinema.imageUrl}}" class="cinema" />
 <h1>{{$ctrl.cinema.name}}</h1>
-
-<p>
-        Search:
-        <input ng-model="$ctrl.query">
-      </p>
-
-      <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
-          <option value="name">Alphabetical</option>
-          <!-- <option value="age">Newest</option> -->
-        </select>
-      </p>
-
-    </div>
-    <div class="col-md-10">
-
 <ul class="specs">
-  <li>
-    <span>Start Work Hour</span>
-    <dd>{{$ctrl.cinema.startWorkTime}}</dd>
-  </li>
    <li>
-    <span>End Work Hour</span>
-    <dd>{{$ctrl.cinema.closeWorkTime}}</dd>
-  </li>
+      <span>Start Work Hour</span>
+      <dd>{{$ctrl.cinema.startWorkTime}}</dd>
+   </li>
+   <li>
+      <span>End Work Hour</span>
+      <dd>{{$ctrl.cinema.closeWorkTime}}</dd>
+   </li>
 </ul>
-
-<ul class="halls">
-  <li ng-repeat="hall in $ctrl.cinema.halls | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
-   <!--  <a href="#!/halls/{{hall.id}}" class="thumb">
-    <img ng-src="{{cinema.imageUrl}}" alt="{{cinema.name}}" />
-    </a> -->
-    <a href="#!/halls/{{hall.id}}">{{hall.name}}</a>
-    </li>
-</ul> 
+<div class="col-md-10">
+   <h1>Available halls</h1>
+   <ul class="halls">
+      <li ng-repeat="hall in $ctrl.cinema.halls" class="thumbnail">
+         <a href="#!/halls/{{hall.id}}" class="thumb">
+         <img ng-src="{{hall.imageUrl}}" alt="{{hall.name}}" />
+         </a>
+         <a href="#!/halls/{{hall.id}}">{{hall.name}}</a>
+      </li>
+   </ul>
+</div>
